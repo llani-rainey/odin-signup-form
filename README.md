@@ -1,5 +1,7 @@
 # ⚡ Odin Sign-up Form
 
+Project Link: https://llani-rainey.github.io/odin-signup-form/
+
 This project is a sign-up form for an imaginary service, designed to practice layout scaffolding, form validation, and advanced CSS concepts. It is a part of **The Odin Project's** Intermediate HTML and CSS curriculum.
 
 ## 🚀 Features
