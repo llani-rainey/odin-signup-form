@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'Norse';
+    src: url('Norse-Bold.otf');
+}
+
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.sidebar {
+    background-image: url('Fern.avif');
+    flex: 0 0 450px;
+    background-color: green;
+    background-size: cover; /* Ensures the image fills the sidebar without gaps */
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 180px;
+
+}
+
+.logo-banner{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%; /* "I don't care what alignment rules I add to the Sidebar later; this banner must always touch both walls."*/
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.logo-banner h1 {
+    font-family: 'Norse', sans-serif;
+    color: white;
+    font-size: 4.1rem; /* always use rem over px as scales with user settings */
+    margin: 0; /* Browsers give <h1> tags massive default top and bottom margins. */
+        /* We set this to 0 to stop the 'ODIN' text from pushing the black bar taller or sitting off-center from the logo face. */
+}
+
+.logo-banner img {
+    height: 100px;
+    width: auto; /* 'auto' tells the browser to calculate the width based on the height.This ensures the image keeps its original proportions and doesn't look squashed or stretched. */
+}
+
+header {
+    background-color: hsl(0, 0%, 90%);
+    padding: 60px 40px;  /* 60px top/bottom, 40px left/right */
+
+    /* Optional: Center the text inside the header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /* justify-content: space-between; */
+
+
+
+    flex: 1;
+    background-color: hsl(0, 0%, 90%);
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    background-color: white;
+    padding: 30px 40px; /* 30px top/bottom, 40px left/right to keep inputs away from the white box edges */
+
+    align-content: flex-start;
+    /* flex-grow: 1; */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+    background-color: black;
+    padding: 40px;
+    background-color: hsl(0, 0%, 90%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+header p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    /* Makes text thick like your reference image */
+    font-size: 1.2rem; /* Professional reading size */
+    line-height: 1.2; /* Adds space between lines within the same paragraph */
+
+    /* margin: 0;This would REMOVE the gap between the two p's if  wanted total control */
+}
+
+.input-group {
+    flex: 0 0 calc(50% - 10px); /* Each box takes up 50% of the width, minus half of the 20px gap */
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Space between the label text and the input box */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+input {
+    padding: 8px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+}
+
+.form-title h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.form-title {
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:focus {
+    outline: none;
+    /* Removes default browser glow */
+    border: 1px solid #2563eb;
+    /* Blue border per instructions */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow per instructions */
+}
+
+button {
+    background-color: #596D48;
+    color: white;
+    padding: 15px 50px;  /* Large clickable area */
+    border: none;
+    border-radius: 8px; /* Matches the rounded design */
+    font-weight: 700;
+    cursor: pointer; /* Shows hand icon on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);/* Subtle lift */
+    align-self: flex-start; /* Keeps button from stretching */
+}
+
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+footer a {
+    color: #596D48;
+    text-decoration: none; /* Removes the underline */
+    font-weight: 700; /* Makes it pop */
+}
+
+footer a:hover {
+    text-decoration: underline;
+    /* Adds underline only when hovering */
+}
+
+.input-group label {
+    font-size: 0.7rem;
+    /* Makes them small and secondary */
+    font-weight: 800;
+    /* Makes the small text easy to read */
+    letter-spacing: 1px;
+    /* Adds professional 'air' between letters */
+    text-transform: uppercase;
+    /* Forces the 'all-caps' look automatically */
+    color: #1f2937;
+    /* A dark charcoal grey */
+    margin-bottom: 2px;
+    /* Keeps it tight to the input box */
+}
